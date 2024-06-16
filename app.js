@@ -1,3 +1,5 @@
+// app.js
+
 const recordButton = document.getElementById('recordButton');
 const outputTextarea = document.getElementById('output');
 const totalButton = document.getElementById('totalButton');
@@ -27,11 +29,13 @@ if (recognition) {
   recognition.onstart = () => {
     recognizing = true;
     recordButton.innerText = 'Stop Recording';
+    recordButton.classList.add('recording');
   };
 
   recognition.onend = () => {
     recognizing = false;
     recordButton.innerText = 'Start Recording';
+    recordButton.classList.remove('recording');
   };
 
   recognition.onresult = (event) => {
@@ -64,6 +68,7 @@ if (recognition) {
     console.error('Speech recognition error', event);
     recognizing = false;
     recordButton.innerText = 'Start Recording';
+    recordButton.classList.remove('recording');
   };
 
   // Add click event listener to the record button
