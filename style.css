@@ -24,7 +24,7 @@ body {
 }
 
 button {
-  background-color: #ff5722;
+  background-color: #4CAF50; /* Green color for start */
   color: white;
   border: none;
   padding: 12px 25px;
@@ -33,10 +33,25 @@ button {
   font-size: 16px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  position: relative;
 }
 
 button:hover {
-  background-color: #e64a19;
+  background-color: #45a049;
+}
+
+button.start::before {
+  content: "\u25B6"; /* Unicode symbol for play */
+  margin-right: 5px;
+}
+
+button.recording {
+  background-color: #f44336; /* Red color for recording */
+}
+
+button.recording::before {
+  content: "\u25A0"; /* Unicode symbol for record */
+  margin-right: 5px;
 }
 
 textarea {
