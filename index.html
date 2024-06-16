@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil Speech Recognition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tamil Speech Recognition</h1>
+    <select id="languageDropdown">
+      <option value="ta-IN" selected>Tamil</option>
+      <option value="en-US">English</option>
+      <!-- Add more languages as needed -->
+    </select>
+    <button id="recordButton">Start Recording</button>
+    <textarea id="output" placeholder="The transcribed text will appear here..."></textarea>
+    <div id="results">
+      <div id="total">Total: 0</div>
+      <div id="lineCount">Lines: 0</div>
+    </div>
+    <div>
+      <button id="totalButton">Total</button>
+      <button id="resetButton">Reset</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
